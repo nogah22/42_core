@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 11:42:43 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/02 16:49:08 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/06 10:54:30 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdio.h>
+# include <ctype.h>
+# include <string.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

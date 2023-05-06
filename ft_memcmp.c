@@ -6,14 +6,11 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:59:54 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/02 15:15:33 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/06 11:03:29 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
-
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
