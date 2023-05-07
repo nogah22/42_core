@@ -6,14 +6,13 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 15:10:06 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/06 11:03:39 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/06 12:56:33 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
-
 {
 	unsigned char		*d;
 	const unsigned char	*s;

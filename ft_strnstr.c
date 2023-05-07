@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 14:40:46 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/06 13:44:31 by azhia-lo         ###   ########.fr       */
+/*   Created: 2023/05/07 15:40:33 by azhia-lo          #+#    #+#             */
+/*   Updated: 2023/05/07 16:01:46 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	size_t	needle_len;
 
-	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
-	while (n-- > 0)
-		*d++ = *s++;
-	return (dst);
+	if (*needle == '\0')
+		return ((char *)haystack);
+	needle_len = ft_strlen(needle);
+	while (*haystack != '\0' && len >= needle_len)
+	{
+		if (ft_memcmp(haystack, needle, needle_len) == 0)
+			return ((char *)haystack);
+		haystack++;
+		len--;
+	}
+	return (NULL);
 }
 
-// test ft_memcpy function compared to memcpy function.
+// test ft_strnstr function compared to strnstr function
 
 // int main(void)
 // {
 // 	char	str1[] = "Hello World!";
 // 	char	str2[] = "Hello World!";
 
-// 	ft_memcpy(str1+6, str1, 5);
-// 	memcpy(str2+6, str2, 5);
-// 	printf("ft_memcpy: %s\n", str1);
-// 	printf("memcpy: %s\n", str2);
+// 	printf("ft_strnstr: %s\n", ft_strnstr(str1, "o", 5));
+// 	printf("strnstr: %s\n", strnstr(str2, "o", 5));
 // 	return (0);
 // }

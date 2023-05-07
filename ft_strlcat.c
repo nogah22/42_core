@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:36:10 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/06 11:00:16 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/06 14:33:17 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dlen + max] = '\0';
 	return (dlen + slen);
 }
+
+// test ft_strlcat comparing with strlcat that they are identical.
+
+// int main(void)
+// {
+// 	char	str1[50] = "Hello ";
+// 	char	str2[50] = "Hello ";
+// 	char	str3[] = "World!";
+// 	char	str4[] = "World!";
+
+// 	ft_strlcat(str1, str3, 10);
+// 	strlcat(str2, str4, 10);
+// 	printf("ft_strlcat: %s\n", str1);
+// 	printf("strlcat: %s\n", str2);
+// 	return (0);
+// }
