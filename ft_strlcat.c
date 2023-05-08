@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:36:10 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/06 14:33:17 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/08 12:26:29 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (dstsize + slen);
 	if (slen < max)
 		max = slen;
-	ft_memcpy(dst + dlen, src, max);
-	dst[dlen + max] = '\0';
+	ft_strlcpy(dst + dlen, src, max + 1);
 	return (dlen + slen);
 }
 
