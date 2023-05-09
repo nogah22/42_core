@@ -6,11 +6,15 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:59:54 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/06 13:58:20 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/09 14:08:09 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Function compares byte string s1 against byte string s2. Both strings are
+// assumed to be n bytes long. Returns zero if the two strings are identical,
+// otherwise returns the difference between the first two differing bytes.
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

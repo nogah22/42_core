@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:06:53 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/07 16:19:21 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/09 16:30:36 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,14 @@ int	ft_atoi(const char *str)
 	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v'
 		|| *str == '\f' || *str == '\r')
 		str++;
-	if (*str == '-' | *str == '+')
+	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
 			sign = -1;
 		str++;
 	}
 	while (ft_isdigit(*str))
-	{
-		result = result * 10 + (*str - '0');
-		str++;
-	}
+		result = result * 10 + (*str++ - '0');
 	return (sign * result);
 }
 
@@ -40,8 +37,8 @@ int	ft_atoi(const char *str)
 
 // int main(void)
 // {
-// 	char	str[] = "    -+-+-123b456789";
-// 	char	str2[] = "   -+-+-123b456789";
+// 	char	str[] = "    +123b456789";
+// 	char	str2[] = "   +123b456789";
 
 // 	printf("ft_atoi: %d\n", ft_atoi(str));
 // 	printf("atoi: %d\n", atoi(str2));

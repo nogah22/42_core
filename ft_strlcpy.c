@@ -6,11 +6,15 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:10:41 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/07 17:16:10 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/09 13:56:12 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Function copies up to dstsize - 1 characters from the string src to dst,
+// NULL-terminating the copied string. Oh yeah.
+// Returns the len of new string copied.
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

@@ -6,11 +6,14 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 13:58:12 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/06 11:30:21 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/09 11:18:10 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Function writes len amount of bytes of value c (converted to an unsigned
+// char) to the string b.
 
 void	*ft_memset(void *b, int c, size_t len)
 {

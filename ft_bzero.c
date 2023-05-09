@@ -6,14 +6,14 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 14:23:53 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/07 13:20:50 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/09 11:19:23 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // Note that bzero() is not part of the C standard anymore and has been 
-// deprecated in favor of memset().
+// deprecated in favor of memset(). RIP bzero(), gone but not forgotten.
 
 void	ft_bzero(void *s, size_t n)
 {
