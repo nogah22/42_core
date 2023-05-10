@@ -6,11 +6,16 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:37:10 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/10 10:43:35 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:26:46 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Function allocates sufficient memory for a copy of the string s1, does the
+// copy, and returns a pointer to it. The pointer may subsequently be used as
+// an argument to the function free(3). If insufficient memory is available,
+// NULL is returned. 
 
 char	*ft_strdup(const char *s1)
 {

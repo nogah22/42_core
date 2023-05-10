@@ -6,11 +6,14 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:33:01 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/10 11:41:09 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:23:08 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Function allocates and returns a string representing the integer received as
+// an argument. Negative numbers must be handled.
 
 static int	ft_intlen(int n)
 {

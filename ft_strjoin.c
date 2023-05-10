@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 07:53:43 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/10 12:12:19 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:26:55 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 // test ft_strjoin function works
 
-int main(void)
-{
-	char *s1 = "hello ";
-	char *s2 = "world!";
-	char *joined_str = ft_strjoin(s1, s2);
+// int main(void)
+// {
+// 	char *s1 = "hello ";
+// 	char *s2 = "world!";
+// 	char *joined_str = ft_strjoin(s1, s2);
 
-	printf("ft_strjoin: %s\n", joined_str);
-	free(joined_str);
-	return (0);
-}
+// 	printf("ft_strjoin: %s\n", joined_str);
+// 	free(joined_str);
+// 	return (0);
+// }
