@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:37:10 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/09 10:25:29 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 10:43:35 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@ char	*ft_strdup(const char *s1)
 	char	*dup;
 
 	len = ft_strlen(s1);
-	dup = (char *)malloc(sizeof(char) * (len + 1));
+	dup = (char *)ft_calloc(len + 1, sizeof(char));
 	if (dup == NULL)
 		return (NULL);
-	ft_memcpy(dup, s1, len);
-	dup[len] = '\0';
+	ft_strlcpy(dup, s1, len + 1);
 	return (dup);
 }
 
@@ -42,9 +41,7 @@ char	*ft_strdup(const char *s1)
 //         printf("ft_strdup: %s\n", s2_dup);
 //         printf("strdup: %s\n", s1_dup);
 //     }
-
 // 	free(s1_dup);
 //     free(s2_dup);
-
 //     return 0;
 // }

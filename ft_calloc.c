@@ -6,11 +6,18 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:19:51 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/07 16:36:32 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 10:00:02 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// malloc() function allocates <size> bytes of memory and returns a pointer to
+// the allocated memory.
+
+// calloc() function contiguously allocates enough space for <count> objects 
+// that are <size> bytes of memory each and returns a pointer to the allocated
+// memory. The allocated memory is filled with bytes of value zero (0);
 
 void	*ft_calloc(size_t count, size_t size)
 {

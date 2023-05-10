@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 15:40:33 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/09 16:23:11 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 09:46:36 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-// test ft_strnstr function compared to strnstr function
+//test ft_strnstr function compared to strnstr function
 
-// int main(void)
-// {
-// 	char	str1[] = "Hello World!";
-// 	char	str2[] = "Hello World!";
+int main(void)
+{
+	char	str1[] = "Hello World!";
+	char	str2[] = "Hello World!";
 
-// 	printf("ft_strnstr: %s\n", ft_strnstr(str1, "o", 5));
-// 	printf("strnstr: %s\n", strnstr(str2, "o", 5));
-// 	return (0);
-// }
+	printf("ft_strnstr: %s\n", ft_strnstr(str1, "o", 5));
+	printf("strnstr: %s\n", strnstr(str2, "o", 5));
+	return (0);
+}

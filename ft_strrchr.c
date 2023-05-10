@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 15:30:41 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/09 15:57:56 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 09:45:56 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_strrchr(const char *s, int c)
 	len = ft_strlen(s);
 	while (len >= 0)
 	{
-		if (s[len] == c)
-			return ((char *)&s[len]);
+		if (*(s + len) == c)
+			return ((char *)s + len);
 		len--;
 	}
 	return (NULL);

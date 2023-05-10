@@ -6,11 +6,15 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 10:32:57 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/09 15:27:44 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:18:51 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Function allocates and returns an array of strings obtain by splitting 's'
+// using the character 'c' as delimiter. The array must be ended by a NULL
+// pointer.
 
 static size_t	ft_countword(char const *s, char c)
 {
@@ -49,7 +53,7 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	size_t	i;
 
-	if (s == NULL)
+	if (s == NULL || c == '\0')
 		return (NULL);
 	result = (char **)ft_calloc(ft_countword(s, c) + 1, sizeof(char *));
 	if (result == NULL)
@@ -85,6 +89,7 @@ int main(void)
 	while (result[i] != NULL)
 	{
 		printf("%s\n", result[i]);
+		free(result[i]);
 		i++;
 	}
 	free(result);

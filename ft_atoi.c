@@ -6,11 +6,14 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:06:53 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/09 16:30:36 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 09:51:50 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Function converts the initial portion of the string pointed to by str
+// to an int representation.
 
 int	ft_atoi(const char *str)
 {

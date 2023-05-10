@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:33:01 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/09 10:32:52 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 11:41:09 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	len = ft_intlen(n);
-	str = (char *)malloc((len + 1) * sizeof(char));
+	str = (char *)ft_calloc(len + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	str[len] = '\0';
@@ -62,7 +62,7 @@ char	*ft_itoa(int n)
 // 	int		n;
 // 	char	*str;
 
-// 	n = -2147483648;
+// 	n = 214483648;
 // 	str = ft_itoa(n);
 // 	printf("%s\n", str);
 // 	free(str);

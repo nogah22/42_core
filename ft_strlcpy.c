@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:10:41 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/09 13:56:12 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 10:40:58 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		slen = dstsize - 1;
 	if (dstsize > 0)
 	{
-		ft_memcpy(dst, src, slen);
+		ft_memmove(dst, src, slen);
 		dst[slen] = '\0';
 	}
-	return (slen);
+	return (ft_strlen(src));
 }
 
 // test ft_strlcpy function comparing to strlcpy that they are identical.
@@ -37,12 +37,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // {
 // 	char	str1[50] = "Hello ";
 // 	char	str2[50] = "Hello ";
-// 	char	str3[] = "World!";
-// 	char	str4[] = "World!";
+// 	char	str3[] = "World!!!!!!!!!!";
+// 	char	str4[] = "World!!!!!!!!!!";
 
 // 	ft_strlcpy(str1, str3, 10);
 // 	strlcpy(str2, str4, 10);
 // 	printf("ft_strlcpy: %zu\n", ft_strlcpy(str1, str3, 10));
+// 	printf("ft_strlcpy str1: %s\n", str1);
 // 	printf("strlcpy: %lu\n", strlcpy(str2, str4, 10));
+// 	printf("strlcpy str2: %s\n", str2);
 // 	return (0);
 // }

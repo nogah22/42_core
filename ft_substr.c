@@ -6,11 +6,14 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:59:01 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/08 07:50:19 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 11:08:30 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Function allocates and returns a substring from the string 's'.
+// The substring begins at index 'start' and is of maximum size 'len'.
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
@@ -18,32 +21,23 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	if (s == NULL)
 		return (NULL);
-	if (start > ft_strlen(s))
+	if (start > ft_strlen(s) || start > len)
 		return (NULL);
-	substr = (char *)malloc(sizeof(char) * (len + 1));
+	substr = (char *)ft_calloc((len + 1), sizeof(char));
 	if (substr == NULL)
 		return (NULL);
 	ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }
 
-// test ft_substr function compared to substr function
+// test ft_substr function works
 
 // int main(void)
 // {
-// 	char *s1 = "hello world";
-// 	char *s2 = "hello world";
-// 	char *s2_substr = ft_substr(s2, 3, 5);
+// 	char *s = "hello world";
+// 	char *s_substr = ft_substr(s, 4, 22);
 
-// 	if (strcmp(s1, s2_substr) == 0) {
-// 		printf("ft_substr and substr produced the same result\n");
-// 	} else {
-// 		printf("ft_substr and substr produced different results\n");
-// 		printf("ft_substr: %s\n", s2_substr);
-// 		printf("substr: %s\n", s1);
-// 	}
-
-// 	free(s2_substr);
-
-// 	return 0;
+// 	printf("ft_substr: %s\n", s_substr);
+// 	free(s_substr);
+// 	return (0);
 // }
