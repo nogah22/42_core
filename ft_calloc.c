@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:19:51 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/11 15:49:30 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/12 08:36:45 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_calloc(size_t count, size_t size)
 	ptr = malloc(count * size);
 	if (ptr == NULL)
 		return (NULL);
-	else 
+	else
 		ft_memset(ptr, 0, count * size);
 	return (ptr);
 }

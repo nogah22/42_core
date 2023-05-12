@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 17:08:38 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/12 07:48:19 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/12 09:10:24 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	if (lst != NULL)
 	{
 		if (del != NULL)
+		{
 			del(lst->content);
-		free(lst);
+			free(lst);
+		}
 	}
 }
