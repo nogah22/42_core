@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:59:01 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/10 11:08:30 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/11 14:23:23 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	if (s == NULL)
 		return (NULL);
-	if (start > ft_strlen(s) || start > len)
-		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
 	substr = (char *)ft_calloc((len + 1), sizeof(char));
 	if (substr == NULL)
 		return (NULL);
@@ -38,6 +40,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 // 	char *s_substr = ft_substr(s, 4, 22);
 
 // 	printf("ft_substr: %s\n", s_substr);
-// 	free(s_substr);
+// 	// free(s_substr);
 // 	return (0);
 // }

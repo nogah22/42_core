@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 16:49:16 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/09 16:02:59 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/11 14:41:33 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	min_len;
+	size_t	i;
 
-	if (ft_strlen(s1) < ft_strlen(s2))
-		min_len = ft_strlen(s1);
-	else
-		min_len = ft_strlen(s2);
-	if (n > min_len)
-		n = min_len;
-	return (ft_memcmp(s1, s2, n));
+	i = 0;
+	while (i < n)
+	{
+		if (s1[i] == '\0' || s2[i] == '\0')
+			return ((unsigned char)s1[i] - s2[i]);
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
 }
 
 // test ft_strncmp function compared to strncmp function

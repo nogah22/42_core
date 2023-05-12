@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 15:30:41 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/10 09:45:56 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/11 13:40:50 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	len;
 
 	len = ft_strlen(s);
-	while (len >= 0)
+	if (c == '\0')
+		return ((char *)s + len);
+	while (len > 0)
 	{
-		if (*(s + len) == c)
-			return ((char *)s + len);
+		if (s[len - 1] == (unsigned char)c)
+			return ((char *)s + len - 1);
 		len--;
 	}
 	return (NULL);
-
 }
 
 // test ft_strrchr function compared to strrchr function

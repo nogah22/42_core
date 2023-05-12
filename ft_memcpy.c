@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 14:40:46 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/10 09:19:25 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:35:31 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
 	i = 0;
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	while (n-- > 0)
 		*d++ = *s++;
 	return (dst);

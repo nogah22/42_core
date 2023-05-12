@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:36:10 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/09 14:00:53 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/12 08:29:32 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	slen;
 	size_t	max;
 
+	if (dst == NULL && src == NULL)
+		return (0);
+	if (dstsize == 0)
+		return (ft_strlen(src));
 	dlen = ft_strlen(dst);
 	slen = ft_strlen(src);
 	max = dstsize - dlen - 1;

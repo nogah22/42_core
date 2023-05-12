@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 10:32:57 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/10 13:18:51 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/11 12:04:40 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	size_t	i;
 
-	if (s == NULL || c == '\0')
+	if (s == NULL)
 		return (NULL);
 	result = (char **)ft_calloc(ft_countword(s, c) + 1, sizeof(char *));
 	if (result == NULL)
@@ -79,19 +79,19 @@ char	**ft_split(char const *s, char c)
 // test ft_split function that splits a string using the character c as a 
 // delimiter and returns an array of strings.
 
-int main(void)
-{
-	char	**result;
-	int		i;
+// int main(void)
+// {
+// 	char	**result;
+// 	int		i;
 
-	result = ft_split("Hello World Goodbye Hell HELLO HEAVEN", ' ');
-	i = 0;
-	while (result[i] != NULL)
-	{
-		printf("%s\n", result[i]);
-		free(result[i]);
-		i++;
-	}
-	free(result);
-	return (0);
-}
+// 	result = ft_split("\0aa\0bbb", '\0');
+// 	i = 0;
+// 	while (result[i] != NULL)
+// 	{
+// 		printf("%s\n", result[i]);
+// 		free(result[i]);
+// 		i++;
+// 	}
+// 	free(result);
+// 	return (0);
+// }
