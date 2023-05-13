@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:18:48 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/10 13:17:08 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/12 15:20:58 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	i;
 
 	i = 0;
-	if (s == NULL || f == NULL)
+	if (s == NULL)
 		return ;
 	while (s[i] != '\0')
 	{

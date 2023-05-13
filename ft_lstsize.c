@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 16:49:21 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/12 07:15:14 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/12 11:47:49 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	size_t	size;
+	int	size;
 
 	size = 0;
 	while (lst != NULL)

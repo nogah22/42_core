@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:52:46 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/09 11:16:03 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/12 10:12:32 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlen(const char *str)
 	size_t	len;
 
 	len = 0;
-	while (*str++)
+	while (*str++ != '\0')
 		len++;
 	return (len);
 }

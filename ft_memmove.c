@@ -6,7 +6,7 @@
 /*   By: azhia-lo <azhia-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 15:10:06 by azhia-lo          #+#    #+#             */
-/*   Updated: 2023/05/10 10:08:02 by azhia-lo         ###   ########.fr       */
+/*   Updated: 2023/05/12 12:36:23 by azhia-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
-	if (dst == src)
-		return (dst);
-	if (dst > src)
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	if (dst >= src)
 	{
 		while (len-- > 0)
 			d[len] = s[len];
